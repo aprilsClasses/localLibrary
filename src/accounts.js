@@ -1,29 +1,23 @@
 function findAccountById(accounts, id) {
-    const foundAccount = accounts.find(account => account.id === id); // Use find() to search for the park by name
+    const foundAccount = accounts.find(account => account.id === id); 
     
-    // If no park is found, return null explicitly
     if (!foundAccount) {
       return null;
     }
+      return foundAccount; // Return the found park if it exists
   
-    return foundAccount; // Return the found park if it exists
-  
-  // Hint: You can use the [`find()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find) method here. 
 }
 
 function sortAccountsByLastName(accounts) {
   accounts.sort((accountA, accountB) => 
     accountA.name.last.toLowerCase() > accountB.name.last.toLowerCase() ? 1 : -1);
   return accounts;
-  // Hint: You can use the [`sort()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) method here. 
 }
 
 function getAccountFullNames(accounts) {
   return accounts.map(account => `${account.name.first} ${account.name.last}`);
-  // Hint: You can use the [`map()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) method here.
 }
 
-// NOTE: YOU DON'T HAVE TO EDIT THE FUNCTIONS BELOW
 function getTotalNumberOfBorrows(account, books) {
   return books.reduce((acc, book) => {
     const count = book.borrows.reduce((borrowAcc, borrow) => {

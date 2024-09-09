@@ -1,27 +1,25 @@
 function findAuthorById(authors, id) {
-  const foundAuthor = authors.find(author => author.id === id); // Use find() to search for the park by name
+  const foundAuthor = authors.find(author => author.id === id); 
     
-  // If no park is found, return null explicitly
+  
   if (!foundAuthor) {
     return null;
   }
 
-  return foundAuthor; // Return the found park if it exists
+  return foundAuthor; 
 
 }
 
 function findBookById(books, id) {
-  const foundBook = books.find(book => book.id === id); // Use find() to search for the park by name
+  const foundBook = books.find(book => book.id === id); 
     
-  // If no park is found, return null explicitly
   if (!foundBook) {
     return null;
   }
 
-  return foundBook; // Return the found park if it exists
+  return foundBook; 
 }
 
-// NOTE: YOU DON'T HAVE TO EDIT THE FUNCTIONS BELOW
 function partitionBooksByBorrowedStatus(books) {
   return books.reduce(
     (acc, book) => {
